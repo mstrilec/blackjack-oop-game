@@ -1,12 +1,55 @@
-# React + Vite
+# Blackjack Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проєкт є веб-застосунком для гри в Блекджек, реалізованим за допомогою React (Frontend) та використанням об'єктно-орієнтованого програмування (ООП) у JavaScript (Backend-логіка).
 
-Currently, two official plugins are available:
+## Технології
+- **Frontend**: React, TailwindCSS
+- **Backend (ігрова логіка)**: JavaScript (ES6+)
+- **Менеджер пакетів**: npm
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Запуск проєкту
 
-## Expanding the ESLint configuration
+### Встановлення залежностей
+```sh
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Запуск у режимі розробки
+```sh
+npm run dev
+```
+
+### Збірка для продакшну
+```sh
+npm run build
+```
+
+### Запуск продакшн-версії
+```sh
+npm run preview
+```
+
+## Структура проєкту
+```
+├── src
+│   ├── components    # Компоненти React (UI)
+│   ├── models        # Логіка гри (ООП)
+│   ├── App.jsx       # Головний компонент
+│   ├── index.jsx     # Точка входу
+│   ├── index.css     # Стилі
+└── package.json      # Файл конфігурації
+```
+
+## ООП у проєкті
+У проєкті застосовані принципи об'єктно-орієнтованого програмування:
+
+- **Інкапсуляція**: Класи `Player`, `Dealer`, `Deck`, `Card`, `Hand`, `BlackjackGame` приховують внутрішню логіку та надають публічні методи.
+- **Наслідування**: Можна розширити `Player` або `Dealer`, додавши нові можливості.
+- **Поліморфізм**: Методи взаємодіють з об'єктами через загальні інтерфейси (наприклад, карти мають загальні властивості, але різні значення).
+
+## Основна функціональність
+✅ Система ставок
+✅ Взаємодія з дилером
+✅ Різні стани гри (ставка, гра, завершення тощо)
+✅ Перемоги, програші та нічиї
+✅ Візуалізація карт та динамічний UI
